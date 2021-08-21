@@ -1,8 +1,8 @@
 <?php
-$hostname = 'localhost:3306';
-$username = 'root';
-$password = '1927';
-$dbname = "myweb";
+$hostname = 'localhost:<Your_sql_post>';
+$username = 'Your_sql_user';
+$password = 'Your_sql_pass';
+$dbname = "Your_database_name";
 $cookie_name = 'siteAuth';
 $cookie_time = (3600);
 if (!$conn = mysqli_connect($hostname, $username, $password, $dbname)) {
