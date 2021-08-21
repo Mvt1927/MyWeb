@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans" rel="stylesheet">
+    <link href="css/register.css" rel="stylesheet">
+    <title>Login</title>
+</head>
+
+<body>
+    <div id="khung_ngoai" class="khung_ngoai noti">
+        <div class="khung_sign">
+            <div class="khung_singup">
+                <h4 class="text signup">Sign up</h4>
+            </div>
+            <div class="khung_singin">
+                <button id="btn_signin" class="btn_singin" onclick="location.href='login.php'">
+                    Sign in
+                </button>
+            </div>
+        </div>
+        <form id="login_form" action="signup.php" method="POST">
+            <div class="khung_name">
+                <p id="label_name" class="">Your name</p>
+                <input id="input_name" name="name" class="input" placeholder="Your name" type="name" value="">
+            </div>
+            <div class="khung_user">
+                <p id="label_user" class="">Your user name</p>
+                <input id="input_user" name="user" class="input" placeholder="User name" type="user" value="">
+            </div>
+            <div class="khung_pass">
+                <p id="label_pass" class="">Your password</p>
+                <input id="input_pass" name="password" class="input" placeholder="*******" type="password" value="">
+            </div>
+            <div class="khung_repass">
+                <p id="label_repass" class="">Re-enter your password</p>
+                <input id="input_repass" name="repassword" class="input" placeholder="******" type="repassword" value="">
+            </div>
+            <div class="khung_email">
+                <p id="label_email" class="">Your email</p>
+                <input id="input_email" name="email" class="input" placeholder="Your email" type="email" value="">
+            </div>
+            <div class="khung_register">
+                <button type="submit" name="submit" id="btn_register" class="btn_register">
+                    Register Now
+                </button>
+            </div>
+        </form>
+        <div class="khung_noti error">
+            <p id="label_pass_check" class="label_error">adadada</p>
+        </div>
+    </div>
+    <script src="script2.js"></script>
+</body>
+
+</html>
