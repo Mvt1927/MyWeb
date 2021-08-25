@@ -24,7 +24,7 @@ $_SESSION['temp_repass_register'] = "";
 <body>
     <?php
     require_once('../vendor/google/recaptcha/src/autoload.php');
-    require_once("../login/config.php");
+    require_once("../config.php");
     $siteKey = '';
     $secret = '';
     $noti = "";
@@ -34,8 +34,8 @@ $_SESSION['temp_repass_register'] = "";
     $nrp = "";
     $nn = "";
     $ne = "";
-    if ($siteKey == '' && is_readable('../login/config.php')) {
-        $config = include '../login/config.php';
+    if ($siteKey == '' && is_readable('../config.php')) {
+        $config = include '../config.php';
         $siteKey = $config['v2']['site'];
         $secret = $config['v2']['secret'];
     }

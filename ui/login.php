@@ -17,7 +17,7 @@ session_start();
 <body>
     <?php
     require_once('../vendor/google/recaptcha/src/autoload.php');
-    require_once("../login/config.php");
+    require_once("../config.php");
     $siteKey = '';
     $secret = '';
     $_SESSION['temppass2'] = "";
@@ -26,8 +26,8 @@ session_start();
     $snoti = "";
     $np = "";
     $nu = "";
-    if ($siteKey == '' && is_readable('../login/config.php')) {
-        $config = include '../login/config.php';
+    if ($siteKey == '' && is_readable('../config.php')) {
+        $config = include '../config.php';
         $siteKey = $config['v2']['site'];
         $secret = $config['v2']['secret'];
     }
@@ -38,6 +38,9 @@ session_start();
             $sql = "SELECT * FROM member WHERE user ='$usr' AND pass='$hash'";
             $query1 = mysqli_query($conn, $sql);
             if (mysqli_num_rows($query1) > 0) {
+                if (isset($_SESSION['burl'])) {
+                    header('location:'.$_SESSION['burl']);
+                }
                 header('location:index.php');
             }
         }
@@ -93,7 +96,12 @@ session_start();
                         $noti = "";
                         $snoti = "";
                         $_SESSION['username'] = $user;
+                        if ($_SESSION['burl']!="") {
+                            header('location:'.$_SESSION['burl']);
+                            exit;
+                        }
                         header('Location: index.php');
+                        exit;
                     }
                 } else {
                     $errors = $resp->getErrorCodes();

@@ -24,7 +24,7 @@ if (!isset($_SESSION['username'])) {
 	$user_or_email="";
 	if (isset($_SESSION['username'])) {
 		$user_or_email=$_SESSION['username'];
-		require_once("../login/config.php");
+		require_once("../config.php");
 		$sql="SELECT `name` FROM `myweb`.`member` where `user`= '$user_or_email' or `email` = '$user_or_email';";
 		$rs=mysqli_query($conn,$sql);
 		$name=mysqli_fetch_array($rs); 

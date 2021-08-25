@@ -1,0 +1,334 @@
+@keyframes menu_on {
+    from {
+        margin-right: 100%;
+        width: 0%
+    }
+    to {
+        margin-right: 60%;
+        width: 25%;
+    }
+}
+
+@keyframes menu_off {
+    from {
+        margin-right: 60%;
+        width: 25%;
+    }
+    to {
+        margin-right: 100%;
+        width: 0%;
+        display: none;
+    }
+}
+
+@keyframes btn_menu_on {
+    from {
+        margin-left: 0%;
+    }
+    to {
+        margin-left: 80%;
+    }
+}
+
+@keyframes btn_menu_off {
+    from {
+        margin-left: 80%;
+    }
+    to {
+        margin-left: 0%;
+    }
+}
+
+
+/* khung body */
+
+@keyframes khung_body_on {
+    from {
+        width: 97%;
+    }
+    to {
+        width: 72%;
+    }
+}
+
+@keyframes khung_body_off {
+    from {
+        width: 72%;
+    }
+    to {
+        width: 97%;
+    }
+}
+
+@keyframes body_off {
+    from {
+        width: 96%;
+    }
+    to {
+        width: 97%;
+    }
+}
+
+@keyframes body_on {
+    from {
+        width: 97%;
+    }
+    to {
+        width: 96%;
+    }
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0px;
+    background-color: rgb(247, 247, 247);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: fit-content;
+    z-index: 10000;
+    float: left;
+}
+
+.thanh_tren {
+    position: relative;
+    height: 50px;
+    background-color: rgb(0, 100, 255);
+    width: 100%;
+    float: left;
+}
+
+.span_menu {
+    float: right;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.khung_logo {
+    position: relative;
+    float: left;
+    width: 25%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.khung_user {
+    position: relative;
+    float: left;
+    width: 33%;
+    height: 100%;
+}
+
+.user {
+    position: relative;
+    padding-top: 0px;
+    float: right;
+    color: white;
+    font-weight: 900;
+}
+
+.btn-menu {
+    width: 30%;
+    float: left;
+    padding-left: 60px;
+}
+
+.container {
+    padding: 5px;
+    display: inline-block;
+}
+
+.container.change.on {
+    margin-left: 80%;
+    /* -moz-animation-name: btn_menu_on;
+    -webkit-animation-name: btn_menu_on; */
+    animation-name: btn_menu_on;
+    /* -moz-animation-duration: 1s;
+    -webkit-animation-duration: 1s; */
+    animation-duration: 1s;
+}
+
+.container.off {
+    margin-left: 0%;
+    /* -moz-animation-name: btn_menu_off;
+    -webkit-animation-name: btn_menu_off; */
+    animation-name: btn_menu_off;
+    /* -moz-animation-duration: 1s;
+    -webkit-animation-duration: 1s; */
+    animation-duration: 1s;
+}
+
+.khung_menu {
+    position: relative;
+    float: left;
+    z-index: 10000;
+}
+
+.khung_body {
+    width: 97%;
+    position: relative;
+    float: right;
+    border: 2px solid rgb(212, 212, 212);
+    top: 50px;
+    background-color: rgb(255, 255, 255);
+    margin: 20px;
+}
+
+.khung_body.off {
+    width: 97%;
+    /* -moz-animation-name: khung_body_off;
+    -webkit-animation-name: khung_body_off; */
+    animation-name: khung_body_off;
+    /* -moz-animation-duration: 1s;
+    -webkit-animation-duration: 1s; */
+    animation-duration: 1s;
+}
+
+.khung_body.on {
+    width: 72%;
+    /* -moz-animation-name: khung_body_on;
+    -webkit-animation-name: khung_body_on; */
+    animation-name: khung_body_on;
+    /* -moz-animation-duration: 1s;
+    -webkit-animation-duration: 1s; */
+    animation-duration: 1s;
+}
+
+.body {
+    width: 97%;
+    position: relative;
+    float: left;
+    border: 1px solid rgb(212, 212, 212);
+    margin: 20px;
+    margin-bottom: 250px;
+}
+
+.khung_body.on>.body {
+    width: 96%;
+    /* -moz-animation-name: body_on;
+    -webkit-animation-name: body_on; */
+    animation-name: body_on;
+    /* -moz-animation-duration: 1s;
+    -webkit-animation-duration: 1s; */
+    animation-duration: 1s;
+}
+
+.khung_body.off>.body {
+    width: 97%;
+    /* -moz-animation-name: body_off;
+    -webkit-animation-name: body_off; */
+    animation-name: body_off;
+    /* -moz-animation-duration: 1s;
+    -webkit-animation-duration: 1s; */
+    animation-duration: 1s;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-8px, 7px);
+    transform: rotate(-45deg) translate(-8px, 7px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -7px);
+    transform: rotate(45deg) translate(-8px, -7px);
+}
+
+.menu {
+    position: fixed;
+    top: 50px;
+    height: 800px;
+    background-color: rgb(0, 100, 255);
+    float: left;
+    border-top: solid 1px rgb(255, 255, 255);
+}
+
+.menu.on {
+    /* -moz-animation-duration: 1s;
+    -webkit-animation-duration: 1s; */
+    animation-duration: 1s;
+    /* -moz-animation-name: menu_on;
+    -webkit-animation-name: menu_on; */
+    animation-name: menu_on;
+    display: block;
+    width: 25%;
+}
+
+.menu.off {
+    /* -moz-animation-duration: 1s;
+    -webkit-animation-duration: 1s; */
+    animation-duration: 1s;
+    /* -moz-animation-name: menu_off;
+    -webkit-animation-name: menu_off; */
+    animation-name: menu_off;
+    width: 0%;
+}
+
+.khung_btn_save {
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+.btn_save {
+    width: 150px;
+    height: 45px;
+    border-radius: 5px;
+    border: solid 1px rgb(0, 100, 255);
+    position: relative;
+    margin: auto;
+    background-color: rgb(0, 100, 255);
+    font-size: 18px;
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+    cursor: pointer;
+}
+
+.btn_save:hover {
+    color: white;
+    background-color: rgb(0, 50, 255);
+    border: solid 1px rgb(0, 50, 255);
+}
+
+.cau_hoi {
+    margin-left: 40px;
+    font-weight: 300;
+}
+
+.khung_phuong_an {
+    margin-left: 60px;
+    border-bottom: solid 1px rgb(212, 212, 212);
+}
+
+.ten_binh_chon {
+    text-align: center;
+}
+
+.logo {
+    height: 50px;
+    margin-left: 90px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+}
