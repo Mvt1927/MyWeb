@@ -1,8 +1,8 @@
 <?php
-$hostname = 'localhost:3306';
-$username = 'root';
-$password = '1927';
-$dbname = "myweb";
+$hostname = 'localhost:<Your_sql_post>';
+$username = 'Your_sql_user';
+$password = 'Your_sql_pass';
+$dbname = "Your_database_name";
 $cookie_name = 'siteAuth';
 $cookie_time = (3600);
 if (!$conn = mysqli_connect($hostname, $username, $password, $dbname)) {
@@ -11,12 +11,12 @@ if (!$conn = mysqli_connect($hostname, $username, $password, $dbname)) {
 }
 return [
     'v3' => [
-      'site' => '6LepPQwcAAAAABC_YEYjyH35U6uvJJ4a_GdR9jtg',
-      'secret' => '6LepPQwcAAAAAGtS8eQ8TQGm7vX9lbGkk51n1fx5',
+      'site' => 'Your_site_key',
+      'secret' => 'Your_secret_key',
     ],
     'v2' =>[
-      'site' => '6LdKVAwcAAAAAB6BP1FRIKEZX8CjG1vM0Gev3dH3',
-      'secret' => '6LdKVAwcAAAAACJh_zMUm_20dIlMIZpKGF8ljuwJ',
+      'site' => 'Your_site_key',
+      'secret' => 'Your_secret_key',
     ]
   ];
 ?>
